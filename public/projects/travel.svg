@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#121A2B"/>
+      <stop offset="1" stop-color="#182339"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="300" fill="url(#g1)"/>
+  <circle cx="380" cy="60" r="34" fill="#F5B942" opacity="0.9"/>
+  <path d="M0 220 Q 90 160 180 210 T 360 195 T 480 220 V300 H0 Z" fill="#182339"/>
+  <path d="M0 250 Q 100 200 220 240 T 480 235 V300 H0 Z" fill="#0F1626"/>
+  <g stroke="#5EEAD4" stroke-width="2" opacity="0.55">
+    <path d="M60 180 L100 150 L140 180" fill="none"/>
+    <path d="M180 190 L220 155 L260 190" fill="none"/>
+    <path d="M300 185 L340 150 L380 185" fill="none"/>
+  </g>
+  <text x="32" y="270" font-family="JetBrains Mono, monospace" font-size="13" fill="#8B96AC">travel-landing-page.jsx</text>
+</svg>
