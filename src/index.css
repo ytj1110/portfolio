@@ -21,8 +21,8 @@
 
   --max-width: 1120px;
   --section-pad: 7rem;
-  --radius: 14px;
-  --radius-sm: 8px;
+  --radius: 20px;
+  --radius-sm: 40px;
 }
 
 /* ============================================================
@@ -815,7 +815,8 @@ section {
 
   font-size: 1.1rem;
 
-  color: var(--text-primary);
+  /* color: var(--text-primary); */
+  color: #3b82f6;
 
   margin-bottom: 0.3rem;
 }
@@ -847,7 +848,7 @@ section {
 
   padding: 0.45rem 0.75rem;
 
-  border-radius: 6px;
+  border-radius: 60px;
 
   background: transparent;
 

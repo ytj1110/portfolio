@@ -1,36 +1,42 @@
-import { useEffect, useState } from 'react'
-import { GitHubIcon, LinkedInIcon } from './Icons.jsx'
+import { useEffect, useState } from "react";
+import { GitHubIcon, LinkedInIcon } from "./Icons.jsx";
 
-const ROLES = ['Full-Stack Web Developer', 'React & Vue Developer', 'Laravel + PHP Developer']
+const ROLES = [
+  "Full-Stack Web Developer",
+  "React & Vue Developer",
+  "Laravel + PHP Developer",
+];
 
 export default function Hero() {
-  const [roleIndex, setRoleIndex] = useState(0)
-  const [text, setText] = useState('')
-  const [deleting, setDeleting] = useState(false)
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [text, setText] = useState("");
+  const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const fullText = ROLES[roleIndex]
-    const speed = deleting ? 35 : 65
-    const pause = 1600
+    const fullText = ROLES[roleIndex];
+    const speed = deleting ? 35 : 65;
+    const pause = 1600;
 
     if (!deleting && text === fullText) {
-      const t = setTimeout(() => setDeleting(true), pause)
-      return () => clearTimeout(t)
+      const t = setTimeout(() => setDeleting(true), pause);
+      return () => clearTimeout(t);
     }
 
-    if (deleting && text === '') {
-      setDeleting(false)
-      setRoleIndex((i) => (i + 1) % ROLES.length)
-      return
+    if (deleting && text === "") {
+      setDeleting(false);
+      setRoleIndex((i) => (i + 1) % ROLES.length);
+      return;
     }
 
     const t = setTimeout(() => {
       setText((prev) =>
-        deleting ? fullText.slice(0, prev.length - 1) : fullText.slice(0, prev.length + 1)
-      )
-    }, speed)
-    return () => clearTimeout(t)
-  }, [text, deleting, roleIndex])
+        deleting
+          ? fullText.slice(0, prev.length - 1)
+          : fullText.slice(0, prev.length + 1),
+      );
+    }, speed);
+    return () => clearTimeout(t);
+  }, [text, deleting, roleIndex]);
 
   return (
     <section id="home" className="hero">
@@ -43,8 +49,9 @@ export default function Hero() {
             <span className="cursor" />
           </p>
           <p className="hero__desc">
-            I build responsive, modern, and user-friendly web applications with modern
-            technologies — from the interface a user touches to the backend that runs it.
+            I build responsive, modern, and user-friendly web applications with
+            modern technologies — from the interface a user touches to the
+            backend that runs it.
           </p>
 
           <div className="hero__cta">
@@ -88,32 +95,50 @@ export default function Hero() {
           <div className="hero__panel-body">
             <div>
               <span className="ln">1</span>
-              <span className="kw">const</span> <span className="prop">developer</span> = {'{'}
+              <span className="kw">const</span>{" "}
+              <span className="prop">developer</span> = {"{"}
             </div>
             <div>
-              <span className="ln">2</span>&nbsp;&nbsp;<span className="prop">name</span>:{' '}
+              <span className="ln">2</span>&nbsp;&nbsp;
+              <span className="prop">name</span>:{" "}
               <span className="str">'Yousef Tarek'</span>,
             </div>
             <div>
-              <span className="ln">3</span>&nbsp;&nbsp;<span className="prop">role</span>:{' '}
+              <span className="ln">3</span>&nbsp;&nbsp;
+              <span className="prop">role</span>:{" "}
               <span className="str">'Full-Stack Developer'</span>,
             </div>
             <div>
-              <span className="ln">4</span>&nbsp;&nbsp;<span className="prop">stack</span>: [
-              <span className="str">'React'</span>, <span className="str">'Laravel'</span>],
+              <span className="ln">4</span>&nbsp;&nbsp;
+              <span className="prop">stack</span>: [
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <span className="str">'React'</span>,
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <span className="str">'Vue.js'</span>,
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <span className="str">'Laravel'</span>,
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <span className="str">'PHP'</span>
+              <br />
+              ],
             </div>
             <div>
-              <span className="ln">5</span>&nbsp;&nbsp;<span className="fn">buildSomething</span>
-              (){' => '}
+              <span className="ln">5</span>&nbsp;&nbsp;
+              <span className="fn">buildSomething</span>
+              (){" => "}
               <span className="str">'clean & scalable'</span>,
             </div>
             <div>
               <span className="ln">6</span>
-              {'}'};
+              {"}"};
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

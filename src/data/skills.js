@@ -18,18 +18,18 @@ export const skillGroups = [
     id: 'database',
     label: 'Database',
     comment: '// where it lives',
-    skills: ['MySQL'],
+    skills: ['MySQL' , 'Query Optimization' ],
   },
   {
     id: 'programming',
     label: 'Programming',
     comment: '// how it is structured',
-    skills: ['OOP'],
+    skills: ['OOP' , 'REST APIs' , 'Ajex'],
   },
   {
     id: 'tools',
     label: 'Tools',
     comment: '// how it ships',
-    skills: ['Git', 'GitHub'],
+    skills: ['Git', 'GitHub' , , 'Postman' , 'Figma' , 'VS Code'],
   },
 ]
