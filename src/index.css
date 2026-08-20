@@ -1939,3 +1939,29 @@ section {
     scroll-behavior: auto !important;
   }
 }
+
+.cursor-glow {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.13) 0%,
+    rgba(59, 130, 246, 0.055) 35%,
+    transparent 70%
+  );
+
+  transform: translate(-50%, -50%);
+  filter: blur(14px);
+}
+
+main,
+.navbar,
+.footer {
+  position: relative;
+  z-index: 1;
+}
