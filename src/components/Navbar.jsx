@@ -13,59 +13,32 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
 
-    onScroll();
-    window.addEventListener("scroll", onScroll);
+    handleScroll();
 
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
-  const handleLinkClick = () => setOpen(false);
+  const handleLinkClick = () => {
+    setOpen(false);
+  };
 
   return (
     <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="container navbar__inner">
-        <a href="#home" className="navbar__brand">
+        <a href="#home" className="navbar__brand" onClick={handleLinkClick}>
           <span className="navbar__brand-mark">YT</span>
-          Yousef Tarek
+          <span>Yousef Tarek</span>
         </a>
 
         <nav className="navbar__links">
-          {LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="navbar__link"
-              data-index={link.index}
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        <button
-          className="navbar__toggle"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span
-            style={{
-              transform: open ? "translateY(7px) rotate(45deg)" : "none",
-            }}
-          />
-          <span style={{ opacity: open ? 0 : 1 }} />
-          <span
-            style={{
-              transform: open ? "translateY(-7px) rotate(-45deg)" : "none",
-            }}
-          />
-        </button>
-      </div>
-
-      {open && (
-        <nav className="navbar__mobile">
           {LINKS.map((link) => (
             <a
               key={link.href}
@@ -78,7 +51,51 @@ export default function Navbar() {
             </a>
           ))}
         </nav>
-      )}
+
+        <button
+          type="button"
+          className="navbar__toggle"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((value) => !value)}
+        >
+          <span
+            style={{
+              transform: open
+                ? "translateY(7px) rotate(45deg)"
+                : "translateY(0) rotate(0)",
+            }}
+          />
+
+          <span
+            style={{
+              opacity: open ? 0 : 1,
+            }}
+          />
+
+          <span
+            style={{
+              transform: open
+                ? "translateY(-7px) rotate(-45deg)"
+                : "translateY(0) rotate(0)",
+            }}
+          />
+        </button>
+      </div>
+
+      <nav className={`navbar__mobile ${open ? "navbar__mobile--open" : ""}`}>
+        {LINKS.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            className="navbar__link"
+            data-index={link.index}
+            onClick={handleLinkClick}
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
     </header>
   );
 }
