@@ -927,7 +927,6 @@ section {
   display: grid;
 
   grid-template-columns: repeat(2, 1fr);
-
   gap: 1.5rem;
 }
 
@@ -937,6 +936,7 @@ section {
   border-radius: var(--radius);
 
   background: rgba(14, 19, 28, 0.82);
+  /* background: rgba(14, 23, 39, 0.82); */
 
   padding: 1.8rem;
 
@@ -997,7 +997,8 @@ section {
 
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  color: var(--text-muted);
+  color:rgb(219, 213, 213);
+  /* color: var(--text-muted); */
 
   transition:
     color 0.18s ease,
@@ -1384,14 +1385,20 @@ section {
   margin-bottom: 1.4rem;
 }
 
+/* ============================================================
+   CONTACT ITEMS
+   ============================================================ */
+
 .contact__item {
   display: flex;
 
   align-items: center;
 
-  gap: 0.9rem;
+  gap: 1rem;
 
-  padding: 0.95rem 1.05rem;
+  padding: 1.05rem 1.15rem;
+
+  min-height: 70px;
 
   border: 1px solid var(--border);
 
@@ -1402,7 +1409,8 @@ section {
   transition:
     border-color 0.2s ease,
     transform 0.2s ease,
-    background 0.2s ease;
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .contact__item:hover {
@@ -1411,6 +1419,8 @@ section {
   background: rgba(59, 130, 246, 0.025);
 
   transform: translateX(4px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
 }
 
 .contact__item-icon {
@@ -1419,8 +1429,8 @@ section {
   align-items: center;
   justify-content: center;
 
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
 
   border-radius: var(--radius-sm);
 
@@ -1429,24 +1439,62 @@ section {
   color: var(--accent);
 
   flex-shrink: 0;
+
+  border: 1px solid rgba(59, 130, 246, 0.12);
 }
 
+.contact__item-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contact__item > span:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-width: 0;
+}
+
+/* Bigger and clearer labels */
 .contact__item-label {
-  font-size: 0.75rem;
+  display: block;
 
-  color: var(--text-faint);
+  font-family: var(--font-display);
 
-  font-family: var(--font-mono);
+  font-size: 1rem;
 
-  margin-bottom: 0.15rem;
+  line-height: 1.3;
+
+  font-weight: 600;
+
+  letter-spacing: 0.01em;
+
+  color: var(--accent-2);
+
+  margin-bottom: 0.25rem;
 }
 
+/* Values */
 .contact__item-value {
-  font-size: 0.92rem;
+  display: block;
+
+  font-size: 0.95rem;
+
+  line-height: 1.45;
 
   color: var(--text-primary);
 
   word-break: break-word;
+}
+
+/* GitHub / LinkedIn without value */
+.contact__item-label:only-child {
+  font-size: 1.05rem;
+
+  color: var(--text-primary);
 }
 
 /* ============================================================
@@ -1979,8 +2027,20 @@ section {
     gap: 1rem;
   }
 
+  /* CONTACT - MOBILE */
   .contact__item {
-    padding: 0.85rem;
+    padding: 0.95rem;
+
+    min-height: 66px;
+  }
+
+  .contact__item-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact__item-label {
+    font-size: 0.95rem;
   }
 
   .contact__item-value {
@@ -2055,6 +2115,15 @@ section {
     font-size: 0.66rem;
 
     padding: 0.44rem 0.55rem;
+  }
+
+  /* CONTACT - EXTRA SMALL */
+  .contact__item-label {
+    font-size: 0.92rem;
+  }
+
+  .contact__item-value {
+    font-size: 0.78rem;
   }
 }
 

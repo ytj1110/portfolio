@@ -5,25 +5,25 @@ import { GitHubIcon, LinkedInIcon, MailIcon, WhatsAppIcon } from "./Icons.jsx";
 const CONTACT_ITEMS = [
   {
     label: "Email",
-    value: "ytj111007@gmail.com",
+    value: " :ytj111007@gmail.com",
     href: "mailto:ytj111007@gmail.com",
     icon: MailIcon,
   },
   {
     label: "WhatsApp",
-    value: "01206029306",
+    value: " :01206029306",
     href: "https://wa.me/201206029306",
     icon: WhatsAppIcon,
   },
   {
     label: "GitHub",
-    value: "github.com/ytj1110",
+    // value: "github.com/ytj1110",
     href: "https://github.com/ytj1110",
     icon: GitHubIcon,
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/yousef-tarek-dev",
+    // value: "linkedin.com/in/yousef-tarek-dev",
     href: "https://www.linkedin.com/in/yousef-tarek-dev/",
     icon: LinkedInIcon,
   },
