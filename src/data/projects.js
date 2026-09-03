@@ -57,21 +57,22 @@ export const projects = [
   },
 
   {
-    id: "dashboard",
+    id: "panto-travel",
 
-    name: "Dashboard",
+    name: "Panto Travel",
 
-    category: "Dashboard / Admin",
+    category: "Travel Management / Admin Dashboard",
 
     type: "Front End",
 
     description:
-      "An admin dashboard with a clean and responsive user interface for managing data and monitoring application statistics.",
+      "A modern travel platform with a responsive user interface and an admin dashboard for managing travel-related data.",
 
     features: [
-      "Analytics charts and statistics",
-      "Responsive admin interface",
-      "Interactive dashboard components",
+      "Travel destinations and hotel management",
+      "Admin dashboard interface",
+      "Responsive design",
+      "Interactive user interface",
     ],
 
     tech: ["React", "JavaScript", "CSS3", "Recharts", "Axios"],
@@ -102,7 +103,7 @@ export const projects = [
       "Interactive user interface",
     ],
 
-    tech: ["React", "JavaScript", "CSS3", "Axios" , "Bootstrap" , "Jquary"],
+    tech: ["React", "JavaScript", "CSS3", "Axios", "Bootstrap", "Jquary"],
 
     image: "./4.png",
 
