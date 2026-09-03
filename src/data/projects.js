@@ -20,7 +20,7 @@ export const projects = [
       "Hotels and tourism services showcase",
     ],
 
-    tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "AOS" , "PHP" , "API"],
+    tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "AOS", "PHP", "API"],
 
     image: "./1.png",
 
@@ -79,6 +79,34 @@ export const projects = [
     image: "./3.png",
 
     liveUrl: "https://pento-travel-jnvm.vercel.app/",
+
+    githubUrl: null,
+  },
+
+  {
+    id: "ecommerce",
+
+    name: "E-commerce Website",
+
+    category: "E-commerce / Online Store",
+
+    type: "Full Stack",
+
+    description:
+      "A modern and responsive e-commerce website for browsing products, viewing product details, and managing a shopping experience.",
+
+    features: [
+      "Product browsing and categories",
+      "Product details and shopping interface",
+      "Responsive design for all screen sizes",
+      "Interactive user interface",
+    ],
+
+    tech: ["React", "JavaScript", "CSS3", "Axios" , "Bootstrap" , "Jquary"],
+
+    image: "./4.png",
+
+    liveUrl: "https://ecommerce-website-8f8e.vercel.app/",
 
     githubUrl: null,
   },
