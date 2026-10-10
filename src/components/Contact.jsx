@@ -11,8 +11,8 @@ const CONTACT_ITEMS = [
   },
   {
     label: "WhatsApp",
-    value: " :01206029306",
-    href: "https://wa.me/201206029306",
+    value: " :01022340915",
+    href: "https://wa.me/201022340915",
     icon: WhatsAppIcon,
   },
   {
