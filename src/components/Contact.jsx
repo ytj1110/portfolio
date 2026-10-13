@@ -48,7 +48,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const whatsappNumber = "201206029306";
+    const whatsappNumber = "201022340915";
 
     const message = `Hello Yousef,
 
