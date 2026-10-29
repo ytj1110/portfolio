@@ -4,7 +4,7 @@ import { GitHubIcon, LinkedInIcon } from "./Icons.jsx";
 const ROLES = [
   "Full-Stack Web Developer",
   "React & Vue Developer",
-  "Laravel + PHP Developer",
+  ".NET + C# Developer",
 ];
 
 export default function Hero() {
@@ -119,7 +119,10 @@ export default function Hero() {
               <span className="str">'Vue.js'</span>,
               <br />
               &nbsp;&nbsp;&nbsp;&nbsp;
-              <span className="str">'Laravel'</span>,
+              <span className="str">'ASP.NET Core'</span>,
+              <br />
+               &nbsp;&nbsp;&nbsp;&nbsp;
+              <span className="str">'C#'</span>,
               <br />
               &nbsp;&nbsp;&nbsp;&nbsp;
               <span className="str">'PHP'</span>

@@ -6,13 +6,13 @@ export const skillGroups = [
     id: 'frontend',
     label: 'Frontend',
     comment: '// what the user touches',
-    skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Vue.js', 'Bootstrap', 'jQuery'],
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Vue.js', 'Bootstrap', 'jQuery', 'Responsive Design'],
   },
   {
     id: 'backend',
     label: 'Backend',
     comment: '// what powers it',
-    skills: ['PHP', 'Laravel'],
+    skills: ['PHP', 'C#' , 'ASP.NET Core'],
   },
   {
     id: 'database',
